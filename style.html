@@ -1,0 +1,244 @@
+/* ==========================
+   TEMA: CULTIVO VERDE
+========================== */
+
+/* Fonte */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Variáveis */
+:root{
+    --verde-escuro:#2E7D32;
+    --verde:#4CAF50;
+    --verde-claro:#A5D6A7;
+    --verde-suave:#E8F5E9;
+    --marrom:#795548;
+    --bege:#FAF8F2;
+    --branco:#ffffff;
+    --texto:#333;
+    --sombra:0 8px 20px rgba(0,0,0,.1);
+    --transicao:.3s ease;
+}
+
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:var(--bege);
+    color:var(--texto);
+    line-height:1.6;
+}
+
+/* Cabeçalho */
+header{
+    background:linear-gradient(135deg,var(--verde-escuro),var(--verde));
+    color:white;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:var(--sombra);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:var(--transicao);
+}
+
+nav a:hover{
+    color:#C8E6C9;
+}
+
+/* Hero */
+
+.hero{
+    height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+    url("https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1500&q=80");
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    max-width:700px;
+    margin:auto;
+}
+
+.botao{
+    display:inline-block;
+    margin-top:30px;
+    padding:15px 35px;
+    background:var(--verde);
+    color:white;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    transition:var(--transicao);
+}
+
+.botao:hover{
+    background:var(--verde-escuro);
+    transform:translateY(-3px);
+}
+
+/* Seções */
+
+section{
+    padding:80px 10%;
+}
+
+.titulo{
+    text-align:center;
+    font-size:36px;
+    color:var(--verde-escuro);
+    margin-bottom:50px;
+}
+
+/* Cards */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:var(--sombra);
+    transition:var(--transicao);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:25px;
+}
+
+.card h3{
+    color:var(--verde-escuro);
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#666;
+}
+
+/* Botões */
+
+button{
+    padding:12px 25px;
+    border:none;
+    background:var(--verde);
+    color:white;
+    border-radius:30px;
+    cursor:pointer;
+    transition:var(--transicao);
+    font-size:16px;
+}
+
+button:hover{
+    background:var(--verde-escuro);
+}
+
+/* Formulário */
+
+form{
+    max-width:600px;
+    margin:auto;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:15px;
+    margin:12px 0;
+    border:2px solid var(--verde-claro);
+    border-radius:12px;
+    outline:none;
+    font-size:16px;
+}
+
+input:focus,
+textarea:focus{
+    border-color:var(--verde);
+}
+
+/* Rodapé */
+
+footer{
+    background:var(--verde-escuro);
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+/* Scroll suave */
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* Responsividade */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:40px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+header{
+    flex-direction:column;
+    gap:15px;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+}
